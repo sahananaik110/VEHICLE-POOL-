@@ -29,15 +29,33 @@ const userSchema = new mongoose.Schema(
       default: "user",
     },
 
-    isVerified: {
-      type: Boolean,
-      default: false, // after admin approves KYC
+    // DRIVER FIELDS
+    vehicleNumber: {
+      type: String,
+      default: null,
     },
 
-    kycDocument: {
-      type: String, // file path or URL
+    vehicleModel: {
+      type: String,
       default: null,
-    }
+    },
+
+    licensePhoto: {
+      type: String, // path or URL
+      default: null,
+    },
+
+    isDriverVerified: {
+      type: Boolean,
+      default: false,
+    },
+
+    // GENERAL KYC
+    kycDocument: {
+      type: String,
+      default: null,
+    },
+
   },
   { timestamps: true }
 );

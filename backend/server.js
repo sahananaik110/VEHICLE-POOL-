@@ -11,6 +11,11 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 app.use("/api/auth", require("./routes/authRoutes"));
+app.use("/api/driver", require("./routes/driverRoutes"));
+app.use("/api/driver", require("./routes/driverRoutes"));
+app.use("/api/rides", require("./routes/rideRoutes"));
+app.use("/api/rides", require("./routes/rideRoutes"));
+app.use("/api/bookings", require("./routes/bookingRoutes"));
 
 // test route
 app.get("/", (req, res) => {
